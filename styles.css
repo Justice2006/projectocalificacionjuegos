@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://static.wikia.nocookie.net/xbox/images/4/49/The-original-dynamic-background.gif/revision/latest?cb=20220323013547');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #00ff00; /* Verde Xbox clásico */
+    text-shadow: 0 0 10px #00ff00;
+    border: 2px solid #00ff00; /* Cuadro alrededor del título */
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con transparencia */
+}
+
+
+header p a {
+    color: #00ff00; /* Verde Xbox clásico */
+    text-decoration: none;
+}
+
+header p {
+    border: 2px solid #00ff00; /* Cuadro alrededor del contacto */
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con transparencia */
+    margin-bottom: 0; /* Elimina el margen inferior que podría estar creando el cuadrito pequeño */
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.game:hover {
+    transform: scale(1.05);
+}
+
+.game img {
+    width: 80px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    background: #222;
+    border: 1px solid #00ff00; /* Verde Xbox clásico */
+    color: white;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.btn {
+    background: linear-gradient(90deg, #00ff00, #007700); /* Verde Xbox clásico */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #007700, #00ff00); /* Verde Xbox clásico */
+}

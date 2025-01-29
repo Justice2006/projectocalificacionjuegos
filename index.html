@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Califica tus juegos favoritos!</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Añadir Font Awesome para el ícono -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .game {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .game img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        #playButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            font-size: 24px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #playButton:hover {
+            color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Música de fondo -->
+    <audio id="bgMusic" loop>
+        <source src="ogxboxbgm.mp3" type="audio/mp3">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <div class="container">
+        <header>
+            <h1>🎮 ¡Califica tus juegos favoritos y deja tu huella gamer! ⭐</h1>
+            <p>Tu opinión es clave para descubrir cuáles son los juegos más legendarios. 🏆
+                Comparte tu calificación y ayúdanos a crear el ranking definitivo.
+                Desde el terror de Outlast hasta la acción de GTA V, ¡haz que tu voz se escuche! 🎤🔥</p>
+            <p>Contacto: <a href="mailto:ernesto23rc@hotmail.com">ernesto23rc@hotmail.com</a></p>
+        </header>
+        
+        <section class="rating">
+            <h2></h2>
+            <form id="ratingForm" action="survey.html">
+                <div class="game">
+                    <img src="cod_black_ops_2.jpg" alt="Call of Duty Black Ops 2">
+                    <label for="cod">Call of Duty Black Ops 2 (1-10):</label>
+                    <input type="number" id="cod" name="cod" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="the last of us.webp" alt="The Last of Us">
+                    <label for="lastofus">The Last of Us (1-10):</label>
+                    <input type="number" id="lastofus" name="lastofus" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="halo 3.jpg" alt="Halo 3">
+                    <label for="halo3">Halo 3 (1-10):</label>
+                    <input type="number" id="halo3" name="halo3" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="outlast.jpg" alt="Outlast">
+                    <label for="outlast">Outlast (1-10):</label>
+                    <input type="number" id="outlast" name="outlast" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="hollowknight.jpg" alt="Hollow Knight">
+                    <label for="hollow">Hollow Knight (1-10):</label>
+                    <input type="number" id="hollow" name="hollow" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="farcry4.jpg" alt="Far Cry 4">
+                    <label for="farcry4">Far Cry 4 (1-10):</label>
+                    <input type="number" id="farcry4" name="farcry4" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="gta5.jpg" alt="GTA 5">
+                    <label for="gta5">Grand Theft Auto 5 (1-10):</label>
+                    <input type="number" id="gta5" name="gta5" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="fnaf2.webp" alt="Five Nights at Freddy's 2">
+                    <label for="fnaf2">Five Nights at Freddy's 2 (1-10):</label>
+                    <input type="number" id="fnaf2" name="fnaf2" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="smbw.jpg" alt="Super Mario Bros Wii">
+                    <label for="mario">Super Mario Bros Wii (1-10):</label>
+                    <input type="number" id="mario" name="mario" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="rdr2.jpg" alt="Red Dead Redemption 2">
+                    <label for="rdr2">Red Dead Redemption 2 (1-10):</label>
+                    <input type="number" id="rdr2" name="rdr2" min="1" max="10" required>
+                </div>
+                <div class="game">
+                    <img src="l4d2.webp" alt="Left 4 Dead 2">
+                    <label for="left4dead2">Left 4 Dead 2 (1-10):</label>
+                    <input type="number" id="left4dead2" name="left4dead2" min="1" max="10" required>
+                </div>
+                
+                <button type="submit">Enviar Calificación</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Botón para reproducir la música (Ícono de Play) -->
+    <button id="playButton" onclick="playMusic()">
+        <i class="fas fa-play"></i> <!-- Ícono de Play -->
+    </button>
+
+    <script>
+        // Función para reproducir la música
+        function playMusic() {
+            var music = document.getElementById("bgMusic");
+            music.play();
+            document.getElementById("playButton").disabled = true; // Desactivar el botón después de presionar
+        }
+    </script>
+</body>
+</html>
